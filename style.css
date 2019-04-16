@@ -47,20 +47,26 @@ ul li {
 	opacity: .4;
 	color: aqua;
 	text-align: center;
+	font-family: arial;
+}
+
+.content1 > p {
+	font-size: 100px;
+	font-family: 'Great Vibes', Helvetica, sans-serif;
 }
 	
-ul li a:hover {
+/* ul li a:hover {
 	display: block;
 	background-color:pink;
 }
-	
-ul li ul li {
+	 */
+/* ul li ul li {
 	display: none;
 }
-	
-ul li:hover ul li {
+	 */
+/* ul li:hover ul li {
 	display: block;
-}
+} */
 
 .content3 {
 		bottom: 0px;
@@ -69,7 +75,36 @@ ul li:hover ul li {
 	    margin-left: 25%;
 	}
 
-p {
-	font-size: 100px;
-	font-family: 'Great Vibes', Helvetica, sans-serif;
-}
+	.container{
+		text-align: center;
+	
+		
+	}
+	
+	.video {
+		position: fixed;
+		top: 50%; left: 50%;
+		z-index: 1;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;  
+		transform: translate(-50%, -50%);
+	  }
+	
+	
+	.card{
+		position: fixed;
+		top: 50%; left: 50%;
+		z-index: 2;
+		width: auto;
+		height: auto;  
+		transform: translate(-50%, -50%);
+		color: aliceblue;
+	  }
+	
+	
+	/*each card has an id if id ="recipe1" || id = "recipe2" and so on up to 10*/
+	
+	
+	/*create on click for recipe with ajax call*/
