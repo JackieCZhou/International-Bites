@@ -4,7 +4,7 @@ video {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	z-index: 1;
+	z-index: -1;
 	min-width: 100%;
 	min-height: 100%;
 	width: auto;
@@ -32,7 +32,7 @@ ul li {
 	padding-top: 70px;
 	padding-left: 600px;
 	padding-right: 500px;
-	z-index: 2;
+	/* z-index: 2; */
 	color: aqua;
 	float: left;
 }
@@ -42,7 +42,7 @@ ul li {
 	top: 0px;
 	width: 100%;
 	padding: 20px;
-	z-index: 10;
+	/* z-index: 10; */
 	margin: 0px;
 	background-color: black;
 	opacity: .4;
@@ -65,13 +65,14 @@ ul li {
 
 	footer {
 		bottom:0;
-		z-index: 9;
+		/* z-index: 9; */
 		opacity: .3;
 		background-color: black;
 	}
 
 	.container{
 		text-align: center;
+		/* z-index: 2; */
 	
 		
 	}
@@ -79,7 +80,7 @@ ul li {
 	.video {
 		position: fixed;
 		top: 50%; left: 50%;
-		z-index: 1;
+		/* z-index: 1; */
 		min-width: 100%;
 		min-height: 100%;
 		width: auto;
@@ -91,7 +92,7 @@ ul li {
 	.card{
 		position: fixed;
 		top: 50%; left: 50%;
-		z-index: 2;
+		/* z-index: 2; */
 		width: auto;
 		height: auto;  
 		transform: translate(-50%, -50%);
