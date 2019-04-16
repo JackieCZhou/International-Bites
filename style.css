@@ -4,12 +4,12 @@ video {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	z-index: 1;
 	min-width: 100%;
 	min-height: 100%;
 	width: auto;
 	height: auto;
 	transform: translate(-50%, -50%);
+	z-index: -1;
 }
 ul {
 	margin: 0px;
@@ -32,9 +32,9 @@ ul li {
 	padding-top: 70px;
 	padding-left: 600px;
 	padding-right: 500px;
-	z-index: 2;
 	color: aqua;
 	float: left;
+	font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
 }
 .content1 {
 	position: fixed;
@@ -42,7 +42,6 @@ ul li {
 	top: 0px;
 	width: 100%;
 	padding: 20px;
-	z-index: 10;
 	margin: 0px;
 	background-color: black;
 	opacity: .4;
@@ -50,9 +49,15 @@ ul li {
 	text-align: center;
 	font-family: arial;
 }
+
+.content1 > p {
+	font-size: 100px;
+	font-family: 'Great Vibes', Helvetica, sans-serif;
+}
 	
 /* ul li a:hover {
 	display: block;
+	background-color:pink;
 }
 	 */
 /* ul li ul li {
@@ -63,11 +68,11 @@ ul li {
 	display: block;
 } */
 
-	footer {
-		bottom:0;
-		z-index: 9;
-		opacity: .3;
-		background-color: black;
+.content3 {
+		bottom: 0px;
+	    position: fixed;
+		margin-bottom: auto;
+	    margin-left: 25%;
 	}
 
 	.container{
