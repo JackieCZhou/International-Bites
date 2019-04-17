@@ -21,16 +21,19 @@ $(document).ready(function (){
             for (var i = 0; i < recipe.length; i++) {
                 
                 var recipeTitle = recipe[i].title
-                var image = recipe[i].image
+                var image = $("<img>")
+                image.attr('src', recipe[i].image)
 
-              if (i % 3 === 0) {
+                console.log(image);
+
+              if (i !== 0 && i % 3 === 0) {
                 // end the current row
                 $("#container").append(currentRow);
                 // start a new row
                 currentRow = $("<div class='row'>");
               }
               var newCol = $("<div class='col-sm'>");
-              newCol.append("<div class=card bg-transparent style=width: 18rem; id=recipe img src=" + image + " <class=card-img-top alt=...><div class=card-body bg-transparent><h5 class=card-title>" + recipeTitle + "</h5><p class=card-text>Description&nbsp;of Dish</p><a href=# class=btn btn-secondary>Select Dish</a></div>")
+              newCol.append("<div class=card bg-transparent style=width: 18rem; id=recipe ;" + image + "<div class=card-body bg-transparent><h5 class=card-title>" + recipeTitle + "</h5><p class=card-text>Description&nbsp;of Dish</p><a href=# class=btn btn-secondary>Select Dish</a></div>")
               currentRow.append(newCol);
 
             }
