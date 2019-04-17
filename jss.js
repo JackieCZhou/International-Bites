@@ -23,14 +23,14 @@ $(document).ready(function (){
                 var recipeTitle = recipe[i].title
                 var image = recipe[i].image
 
-              if (i % 3 === 0) {
+              if (i !== 0 && i % 3 === 0) {
                 // end the current row
                 $("#container").append(currentRow);
                 // start a new row
                 currentRow = $("<div class='row'>");
               }
               var newCol = $("<div class='col-sm'>");
-              newCol.append("<div class=card bg-transparent style=width: 18rem; id=recipe img src=" + image + " <class=card-img-top alt=...><div class=card-body bg-transparent><h5 class=card-title>" + recipeTitle + "</h5><p class=card-text>Description&nbsp;of Dish</p><a href=# class=btn btn-secondary>Select Dish</a></div>")
+              newCol.append("<div class=card bg-transparent style=width: 18rem; id=recipe" , "<img src=" + image + " class=card-img-top alt=...>",  "<div class=card-body bg-transparent><h5 class=card-title>" + recipeTitle + "</h5><p class=card-text>Description&nbsp;of Dish</p><a href=# class=btn btn-secondary>Select Dish</a></div></div>")
               currentRow.append(newCol);
 
             }
