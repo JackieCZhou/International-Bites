@@ -40,7 +40,7 @@ $(document).ready(function (){
                 currentRow = $("<div class='row'>");
               }
               var newCol = $("<div class='col-sm'>");
-              newCol.append("<div class=card bg-transparent style=width: 18rem; id=recipe" , "<img src=" + image + " class=card-img-top alt=...>",  "<div class=card-body bg-transparent><h5 class=card-title>" + recipeTitle + "</h5><a href=# class=btn btn-secondary>Select Dish</a></div></div>")
+              newCol.append("<div class=card bg-transparent style=width: 18rem; id=recipe" , "<img src=" + image + " class=card-img-top alt=...>",  "<a href=# class=btn btn-secondary>" + recipeTitle + "</a></div></div>")
               currentRow.append(newCol);
 
             }
@@ -48,6 +48,12 @@ $(document).ready(function (){
             if (recipe.length % 3 !== 0) {
               $("#container").append(currentRow);
             }
+
+            $(".btn").on("click", function(){
+              
+              
+
+            })
           
             
 //  
