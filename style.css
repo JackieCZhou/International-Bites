@@ -105,9 +105,10 @@ ul li a:hover {
 	  }
 	
 	
-	.card{
-		position: fixed;
-		top: 50%; left: 50%;
+	.col-sm{
+		margin-left: 30px;
+		/* position: fixed; */
+		/* top: 50%; left: 50%; */
 		/* z-index: 2; */
 		width: auto;
 		height: auto;  
@@ -116,6 +117,7 @@ ul li a:hover {
 		font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
   		color: #fff;
  		text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+
 		background-color: transparent;
 	  }
 
@@ -127,7 +129,7 @@ ul li a:hover {
   	color: #fff;
  	text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }	
-	
+
 
   	.authorize-button, .signout_button, {
            background-color: #4CAF50;
