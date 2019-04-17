@@ -105,6 +105,8 @@ ul li a:hover {
 	  }
 	
 	
+	.card{
+
 	.col-sm{
 		margin-left: 30px;
 		/* position: fixed; */
@@ -114,10 +116,17 @@ ul li a:hover {
 		height: auto;  
 		transform: translate(-50%, -50%);
 		color: aliceblue;
-		font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
+
+		}
+		
+		.card-title {
+
+			font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
   		color: #fff;
  		text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 
+		}
+    
 		background-color: transparent;
 	  }
 
@@ -149,7 +158,6 @@ ul li a:hover {
            width: 250px;
        }
 
-	
 	/*each card has an id if id ="recipe1" || id = "recipe2" and so on up to 10*/
 	
 	
