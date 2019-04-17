@@ -112,6 +112,9 @@ ul li:hover ul li {
 		height: auto;  
 		transform: translate(-50%, -50%);
 		color: aliceblue;
+		font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
+  		color: #fff;
+ 		text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 	  }
 	
 	
