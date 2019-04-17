@@ -87,7 +87,6 @@ ul li a:hover {
 
 	.container{
 		text-align: center;
-		background-color: transparent;
 		/* z-index: 2; */
 	
 		
@@ -106,9 +105,6 @@ ul li a:hover {
 	
 	
 	.card{
-
-	.col-sm{
-		margin-left: 30px;
 		/* position: fixed; */
 		/* top: 50%; left: 50%; */
 		/* z-index: 2; */
@@ -119,45 +115,20 @@ ul li a:hover {
 
 		}
 		
-		.card-title {
+	.card-title {
 
 			font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
   		color: #fff;
  		text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 
 		}
-    
-		background-color: transparent;
-	  }
 
-	.form-group{
-	align-content: center;
-	text-align: center;
-	color: aliceblue;
-	font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
-  	color: #fff;
- 	text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
-}	
-
-
-  	.authorize-button, .signout_button, {
-           background-color: #4CAF50;
-           border: none;
-           color: white;
-           padding: 15px 32px;
-           text-align: center;
-           text-decoration: none;
-           display: inline-block;
-           font-size: 16px;
-           margin: 4px 2px;
-           cursor: pointer;
-       }
-    .input {
-           height: 80px;
-           font-size: 12pt;
-           width: 250px;
-       }
-
+	.btn {
+		font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
+		color: #fff; 
+	}
+	
+	
 	/*each card has an id if id ="recipe1" || id = "recipe2" and so on up to 10*/
 	
 	
