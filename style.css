@@ -58,18 +58,18 @@ ul li {
 	font-family: 'Great Vibes', Helvetica, sans-serif;
 }
 	
-/* ul li a:hover {
+ul li a:hover {
 	display: block;
 	background-color:pink;
 }
 	 */
-/* ul li ul li {
+ul li ul li {
 	display: none;
 }
-	 */
-/* ul li:hover ul li {
+	
+ul li:hover ul li {
 	display: block;
-} */
+}
 
 	footer {
 		bottom:0;
