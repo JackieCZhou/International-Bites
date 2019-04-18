@@ -1,18 +1,17 @@
-$(document).ready(function (){
+// $(document).ready(function (){
 
 
     $(".country").on("click", function(firstpage) {
-    var selection =  $(this).attr("data")
-    localStorage.setItem("data", selection)
-    window.location.href  = "Project1page2.html";
-  })
+      var selection =  $(this).attr("data")
+      localStorage.setItem("data", selection)
+      window.location.href  = "Project1page2.html";
+    })
 
-    var selection = localStorage.getItem("data")
-    console.log(selection)
+      var selection = localStorage.getItem("data")
+      console.log(selection)
 
   var cuisine = $(this).attr("cuisine");
   var queryURL = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=12&tags="+selection
-  var BaseURL = "https://spoonacular.com/recipeImages/"
   $.ajax({
       url: queryURL,
       method: "GET",
@@ -32,6 +31,7 @@ $(document).ready(function (){
                 
                 var recipeTitle = recipe[i].title
                 var image = recipe[i].image
+                var instructions = recipe[i].insctructions
 
               if (i !== 0 && i % 3 === 0) {
                 // end the current row
@@ -47,13 +47,34 @@ $(document).ready(function (){
           
             if (recipe.length % 3 !== 0) {
               $("#container").append(currentRow);
+
+              localStorage.empty()
+
+              localStorage.setItem(recipeTitle)
+              localStorage.setItem(image)
+              localStorage.setItem(instructions)
             }
 
             $(".btn").on("click", function(){
-              
+
+              $("#container").empty()
+
+              imageselected = $("<img>")
+              imageselected.attr($(this).text())
+              imageselected.attr('src', image)
               
 
+              $("#container").append($(this).text(), recipeTitle);
+              $("#container").append(imageselected);
+              $("#container").append($(this).text(), instructions);
+
+              console.log(instructions)
+
+  
+              // window.location.href  = "Page3-1.html";
             })
+
+
           
             
 //  
@@ -83,7 +104,7 @@ $(document).ready(function (){
             //     $("#container").append("<div class=row><div class=col-sm><div class=card bg-transparent style=width: 18rem; id=recipe1>" + image + " class=card-img-top alt=...><div class=card-body bg-transparent><h5 class=card-title>" + recipeTitle + "</h5><p class=card-text>Description&nbsp;of Dish</p><a href=# class=btn btn-secondary>Select Dish</a></div></div></div>")
             // }
     }) 
-  })
+  // })
 
 
         // // Client ID and API key from the Developer Console
