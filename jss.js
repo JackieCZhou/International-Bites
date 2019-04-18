@@ -1,10 +1,10 @@
-// $(document).ready(function (){
+$(document).ready(function (){
 
  
   $(".country").on("click", function(firstpage) {
       var selection =  $(this).attr("data")
       localStorage.setItem("data", selection)
-      window.location.href  = "Project1page2.html";
+      window.location.href = 'Project1page2.html'
   })
 
   var selection = localStorage.getItem("data")
@@ -52,68 +52,41 @@
 
               $("#container").empty()
 
-              var imageSelected = $("<img>");
-              imageSelected.attr('src', $(this).attr('data-image'));
+              var titleSelect = $(this).attr('data-recipe-title')
+              localStorage.setItem("txt", titleSelect)
 
-              var titleSelected = $("<h1>");
-              titleSelected.text($(this).attr('data-recipe-title'));
+              var imgSelect = $(this).attr('data-image')
+              localStorage.setItem('src', imgSelect)
 
-              var instructionsSelected = $("<p>");
-              instructionsSelected.text($(this).attr('data-instructions'));
-              
+              var instructionsSelect = $(this).attr('data-instructions')
+              localStorage.setItem('text', instructionsSelect)
 
-              // localStorage.setItem(titleSelected)
-              // localStorage.setItem(imageSelected)
-              // localStorage.setItem(instructionsSelected)
-
-              var instruc = instructionsSelected[0].outerText
-              var list = instruc.split(".");
-
-              var ol = $("<ol>")
-              for (i = 0; i < list.length; i++) {
-                    var li = $("<li>")
-                    li.text(list[i])
-                    ol.append(li)
-              }
-              $("#container").append(titleSelected);
-              $("#container").append(imageSelected);
-              $("#container").append(ol);
-              
-              // window.location.href  = "Page3-1.html";
+              window.location.href  = "Page3-1.html";
             })
 
+            var gettitle = localStorage.getItem('txt')
+            var getfoodImg = localStorage.getItem('src')
+            var getfoodInctructions = localStorage.getItem('text')
 
-          
+            var foodIntrucstions = getfoodInctructions.split(".")
+
+            var ol = $("<ol>")
+            for (i = 0; i < foodIntrucstions.length; i++) {
+                  var li = $("<li>")
+                  li.text(foodIntrucstions[i])
+                  ol.append(li)
+            }
             
-//  
-//             for (var i=0; i < recipe.length; i++) {
-//                 for (b = 0; b < recipe.length; b++){
-//                     var container = $("<container>")
-//                     var row;
-//                     if (b % 3 === 0){
-//                         row = $("<row>").addClass('row')
-//                     }
-//                     row.append(b)
-//                     container.append(row)
+            var title = $("<h1>")
+            title.text(gettitle)
 
-//                 }
-            //     var search = $("#container");
-            //     var recipeTitle = recipe[i].title
-            //     var image = recipe[i].image
-            //     image.addClass('pics')
-            //     image.attr('src', recipe[i].image);
-            //     image.width(286)
-            //     image.height(160)
-            //     search.append(image)
-            //     search.append(recipeTitle)
-            //     $("#container").append(search)
-            //     $(".card-title").html(recipeTitle)
-            //     $(".card-img-top").attr('src', image)
-            //     $("#container").append("<div class=row><div class=col-sm><div class=card bg-transparent style=width: 18rem; id=recipe1>" + image + " class=card-img-top alt=...><div class=card-body bg-transparent><h5 class=card-title>" + recipeTitle + "</h5><p class=card-text>Description&nbsp;of Dish</p><a href=# class=btn btn-secondary>Select Dish</a></div></div></div>")
-            // }
-    }) 
-  // })
+            var foodImg = $("<img>")
+            foodImg.attr('src', getfoodImg)
 
+
+            $("#container1").append(title)
+            $("#container1").append(foodImg)
+            $("#container1").append(ol)
 
         // // Client ID and API key from the Developer Console
         // var CLIENT_ID = "49691023767-7kj4645ramt75e9gmadalju4hcc00g2u.apps.googleusercontent.com"
@@ -277,3 +250,6 @@
         //     });
     
         //   })
+
+          })
+        })
