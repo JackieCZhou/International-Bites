@@ -28,32 +28,31 @@ video {
 	z-index: -1;
 }
 ul {
-	margin: 0px;
 	padding: 0px;
 	list-style: none;
 	opacity: .9;
 	text-align: center;
 }
 ul li {
-	float: right;
 	width: 340px;
 	height: 40px;
 	background-color: black;
 	opacity: .7;
 	line-height: 40px;
 	text-align: center;
+	margin: auto
 }
 .content {
 	line-height: 50px;
 	position: relative;
 	padding-top: 70px;
-	padding-left: 600px;
+	padding-left: 500px;
 	padding-right: 500px;
 	color: white;
 	float: left;
 	font: 400 30px/0.8 'Pacifico', Helvetica, sans-serif;
 	margin: 0 auto;
-	text-align: center;
+	width: 100%;
 
 }
 .content1 {
@@ -64,7 +63,7 @@ ul li {
 	padding: 20px;
 	margin: 0px;
 	background-color: black;
-	opacity: .4;
+	opacity: .6;
 	color: aqua;
 	text-align: center;
 	font-family: arial;
@@ -74,6 +73,10 @@ ul li {
 	font-size: 100px;
 	font-family: 'Pacifico', Helvetica, sans-serif;
 	color: white;
+}
+
+ol {
+	list-style-type: none;
 }
 	
 ul li a:hover {
@@ -170,7 +173,8 @@ ul li a:hover {
 h1{
 	color: aliceblue;
   font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
-  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+	text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+	text-align: center;
 }
 
 .page4bg{
@@ -191,3 +195,14 @@ h1{
 .loadimg{
 	text-align: center;
 }
+
+.buttoncontainer {
+text-align: center;
+	margin: 0 auto;
+padding: 0;
+}
+
+.footer {
+margin-top: 50%;
+}
+
