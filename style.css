@@ -155,11 +155,18 @@ ul li a:hover {
 		color: #fff; 
 	}
 	
-.buttoncontainer{
-	bottom: 0%;
-	left: 40%;
-	align-content: center
+	.form-group{
+    bottom: 0%;
+    left: 40%;
+    align-content: center;
+    position: fixed;
 }
+.sign{
+    bottom: 0%;
+    position: fixed;
+		margin: 0 0 0 4.5rem;
+}
+
 h1{
 	color: aliceblue;
   font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
