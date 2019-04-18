@@ -1,16 +1,13 @@
 // $(document).ready(function (){
 
-
-    $(".country").on("click", function(firstpage) {
+ 
+  $(".country").on("click", function(firstpage) {
       var selection =  $(this).attr("data")
       localStorage.setItem("data", selection)
       window.location.href  = "Project1page2.html";
-    })
+  })
 
-      var selection = localStorage.getItem("data")
-      console.log(selection)
-
-  var cuisine = $(this).attr("cuisine");
+  var selection = localStorage.getItem("data")
   var queryURL = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=12&tags="+selection
   $.ajax({
       url: queryURL,
@@ -31,7 +28,7 @@
                 
                 var recipeTitle = recipe[i].title
                 var image = recipe[i].image
-                var instructions = recipe[i].insctructions
+                var instructions = recipe[i].instructions
 
               if (i !== 0 && i % 3 === 0) {
                 // end the current row
@@ -40,37 +37,48 @@
                 currentRow = $("<div class='row'>");
               }
               var newCol = $("<div class='col-sm'>");
-              newCol.append("<div class=card bg-transparent style=width: 18rem; id=recipe" , "<img src=" + image + " class=card-img-top alt=...>",  "<a href=# class=btn btn-secondary>" + recipeTitle + "</a></div></div>")
+              newCol.append("<div class=card bg-transparent style=width: 18rem; id=recipe" ,
+                "<img src=" + image + " class=card-img-top alt=...>",
+                "<a href='#' class='btn btn-secondary' data-recipe-title='" + recipeTitle + "' data-image='"+image+"' data-instructions='"+instructions+"' >" + recipeTitle + "</a></div></div>")
               currentRow.append(newCol);
 
             }
           
             if (recipe.length % 3 !== 0) {
               $("#container").append(currentRow);
-
-              localStorage.empty()
-
-              localStorage.setItem(recipeTitle)
-              localStorage.setItem(image)
-              localStorage.setItem(instructions)
             }
 
             $(".btn").on("click", function(){
 
               $("#container").empty()
 
-              imageselected = $("<img>")
-              imageselected.attr($(this).text())
-              imageselected.attr('src', image)
+              var imageSelected = $("<img>");
+              imageSelected.attr('src', $(this).attr('data-image'));
+
+              var titleSelected = $("<h1>");
+              titleSelected.text($(this).attr('data-recipe-title'));
+
+              var instructionsSelected = $("<p>");
+              instructionsSelected.text($(this).attr('data-instructions'));
               
 
-              $("#container").append($(this).text(), recipeTitle);
-              $("#container").append(imageselected);
-              $("#container").append($(this).text(), instructions);
+              // localStorage.setItem(titleSelected)
+              // localStorage.setItem(imageSelected)
+              // localStorage.setItem(instructionsSelected)
 
-              console.log(instructions)
+              var instruc = instructionsSelected[0].outerText
+              var list = instruc.split(".");
 
-  
+              var ol = $("<ol>")
+              for (i = 0; i < list.length; i++) {
+                    var li = $("<li>")
+                    li.text(list[i])
+                    ol.append(li)
+              }
+              $("#container").append(titleSelected);
+              $("#container").append(imageSelected);
+              $("#container").append(ol);
+              
               // window.location.href  = "Page3-1.html";
             })
 
