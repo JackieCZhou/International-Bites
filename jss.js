@@ -84,9 +84,9 @@ $(document).ready(function (){
             foodImg.attr('src', getfoodImg)
 
 
-            $("#container1").append(title)
-            $("#container1").append(foodImg)
-            $("#container1").append(ol)
+            $(".buttoncontainer").append(title)
+            $(".buttoncontainer").append(foodImg)
+            $(".buttoncontainer").append(ol)
 
         // // Client ID and API key from the Developer Console
         // var CLIENT_ID = "49691023767-7kj4645ramt75e9gmadalju4hcc00g2u.apps.googleusercontent.com"
