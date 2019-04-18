@@ -36,7 +36,7 @@ $(document).ready(function () {
         // start a new row
         currentRow = $("<div class='row'>");
       }
-<<<<<<< HEAD
+
       var newCol = $("<div class='col-sm'>");
       newCol.append("<div class=card bg-transparent style=width: 18rem; id=recipe",
         "<img src=" + image + " class=card-img-top alt=...>",
