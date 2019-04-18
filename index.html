@@ -2,36 +2,44 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>International Bite</title>
+<title>Main Page</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'> 
+
 </head>
 <body>
 <div class="content1">
-  <h1>International Bites</h1>
+    <p>International Bites</p>    
 </div>
+	
 <div class="content">
   <ul>
-    <li><a>Tour Cuisine</a>
+    <li><a id ="Selection">Go on a Cuisine Adventure</a>
       <ul>
-        <li><a>India</a></li>
-        <li><a>China</a></li>
-        <li><a>France</a></li>
-        <li><a>Spain</a></li>
-        <li><a>Germany</a></li>
+        <li><a class="country" data="indian">India</a></li>
+        <li><a class="country" data="chinese">China</a></li>
+        <li><a class="country" data="french">France</a></li>
+        <li><a class="country" data="spanish">Spain</a></li>
+        <li><a class="country" data="german">Germany</a></li>
       </ul>
     </li>
   </ul>
 </div>
-<!-- <iframe src="https://github.com/anars/blank-audio/blob/master/250-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
-<video autoplay="autoplay" loop controls height="400" width="900" class="video">
-  <source src="Pexels.mp4" type="video/mp4" />
-</video>;
+<video height="400" width="900" autoplay="autoplay"  preload loop>
+  <source src="./Pexels.mp4" type="video/mp4" />
+</video>
 	<footer>
-		<img src ="cooking.png"
+		<div class ="content3">
+		<img src ="./cooking.png"
 			 class="medium" alt="cooking"/>
+		<img src ="./cooking2.png"
+			 class="medium" alt="cooking"/>
+		</div>
   </footer>
   
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="jss.js"></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+ <script src="jss.js"></script>
 </body>
 </html>

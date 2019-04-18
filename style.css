@@ -1,5 +1,20 @@
 @charset "UTF-8";
+
 video {
+	position: absolute;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.backimage {
 	position: absolute;
 	position: fixed;
 	top: 50%;
@@ -21,7 +36,7 @@ ul {
 }
 ul li {
 	float: right;
-	width: 200px;
+	width: 340px;
 	height: 40px;
 	background-color: black;
 	opacity: .7;
@@ -29,14 +44,17 @@ ul li {
 	text-align: center;
 }
 .content {
+	line-height: 50px;
 	position: relative;
 	padding-top: 70px;
 	padding-left: 600px;
 	padding-right: 500px;
-	/* z-index: 2; */
-	color: aqua;
+	color: white;
 	float: left;
-	font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
+	font: 400 30px/0.8 'Pacifico', Helvetica, sans-serif;
+	margin: 0 auto;
+	text-align: center;
+
 }
 .content1 {
 	position: fixed;
@@ -44,7 +62,6 @@ ul li {
 	top: 0px;
 	width: 100%;
 	padding: 20px;
-	/* z-index: 10; */
 	margin: 0px;
 	background-color: black;
 	opacity: .4;
@@ -55,7 +72,8 @@ ul li {
 
 .content1 > p {
 	font-size: 100px;
-	font-family: 'Great Vibes', Helvetica, sans-serif;
+	font-family: 'Pacifico', Helvetica, sans-serif;
+	color: white;
 }
 	
 ul li a:hover {
@@ -70,13 +88,6 @@ ul li a:hover {
  ul li:hover ul li {
 	display: block;
 } 
-
-	footer {
-		bottom:0;
-		/* z-index: 9; */
-		opacity: .3;
-		background-color: black;
-	}
 	
 .content3 {
 		bottom: 0px;
@@ -85,40 +96,82 @@ ul li a:hover {
 	    margin-left: 25%;
 	}
 
-	.container{
+	#container{
 		text-align: center;
 		/* z-index: 2; */
 	
 		
 	}
-	
-	.video {
-		position: fixed;
-		top: 50%; left: 50%;
-		/* z-index: 1; */
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;  
-		transform: translate(-50%, -50%);
-	  }
+
+
+
+	#container1{
+		text-align: center;
+		/* z-index: 2; */
+}
 	
 	
+
 	.card{
-		position: fixed;
-		top: 50%; left: 50%;
+		/* position: fixed; */
+		/* top: 50%; left: 50%; */
 		/* z-index: 2; */
 		width: auto;
 		height: auto;  
 		transform: translate(-50%, -50%);
 		color: aliceblue;
+
 		font: 400 20px/0.8 'Great Vibes', Helvetica, sans-serif;
   		color: #fff;
  		text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 	  }
+
+
+
 	
 	
-	/*each card has an id if id ="recipe1" || id = "recipe2" and so on up to 10*/
+
+
+		}
+		
+	.card-title {
+
+		font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
+  		text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+
+		}
+
+	.btn {
+		font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
+  		text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+	}
 	
+	.page3bg {
+		position: absolute;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		z-index: -1;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+
+	h1, p, label, li {
+		color: #fff; 
+	}
 	
-	/*create on click for recipe with ajax call*/
+.buttoncontainer{
+	position: absolute;
+	bottom: 0%;
+	left: 40%;
+}
+h1{
+	color: aliceblue;
+  font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+}
+
